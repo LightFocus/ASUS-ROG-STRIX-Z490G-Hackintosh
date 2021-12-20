@@ -5,12 +5,12 @@ Building a Hackintosh on ROG STRIX Z490-G GAMING using OpenCore.
 ## Software
 | Name | Version |
 | :-: | :-: |
-| macOS | 12.0.1 |
-| OpenCore | 0.7.5 |
-| AppleALC | 1.6.7 |
-| Lilu | 1.5.8 |
+| macOS | 12.1 |
+| OpenCore | 0.7.6 |
+| AppleALC | 1.6.8 |
+| Lilu | 1.5.9 |
 | NVMeFix | 1.1.0 |
-| VirtualSMC | 1.2.8 |
+| VirtualSMC | 1.2.9 |
 | WhateverGreen | 1.5.6 |
 
 
@@ -37,7 +37,7 @@ Building a Hackintosh on ROG STRIX Z490-G GAMING using OpenCore.
 | Hardware Acceleration | ✅ | Using AMD Hardware Acceleration, see Hardware Acceleration section |
 | DRM | ✅ | Using AMD Hardware Acceleration |
 | Sleep | ✅ | Need to use mouse to wake up |
-| USB-C on dGPU | ❗ | Charging and video output working, but no data transmission |
+| USB-C on dGPU | ✅ | For data transmission, XHCI-AMD6800.kext is needed, see USB-C section |
 
 ## Wi-Fi Card
 
@@ -139,8 +139,16 @@ For `ResizeGpuBars`, it depends on your GPU's memory. Set it to `n` where `n` is
 
 For example, if I have 16GB video memory, then I should set it to `14` since `2^14 = 16384MB` which is basically 16GB.
 
+## USB-C on RX 6800
+
+By default, the USB-C port on RX 6800 only has the functionality of video output and power delivery due to the fact that macOS loads a wrong kext called **AppleAMDUSBXHCIPCI.kext**.
+
+We'll use a custom kext based on XCHI-unsupported.kext called **XHCI-AMD6800.kext** to force macOS loads the correct kext **AppleUSBXHCIPCI.kext**.
+
+
+
 ## Modify config.plist in the OC Folder
-This repository contains EFI based on OpenCore 0.7.5. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
+This repository contains EFI based on OpenCore 0.7.6. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
 
 You need [ProperTree](https://github.com/corpnewt/ProperTree) to open and edit config.plist.
 
@@ -199,4 +207,8 @@ GPU Scores (Unstable due to the short benchmark period, can change from time to 
 ![GPU1](Images/GPU1.png)
 
 ![GPU2](Images/GPU2.png)
+
+Blackmagic Raw Speed Test
+
+![RAW](Images/BlackmagicRaw.png)
 
