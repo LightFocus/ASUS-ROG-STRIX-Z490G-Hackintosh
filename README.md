@@ -5,13 +5,13 @@ Building a Hackintosh on ROG STRIX Z490-G GAMING using OpenCore.
 ## Software
 | Name | Version |
 | :-: | :-: |
-| macOS | 12.1 |
-| OpenCore | 0.7.6 |
-| AppleALC | 1.6.8 |
-| Lilu | 1.5.9 |
+| macOS | 12.3 Beta 2 |
+| OpenCore | 0.7.8 |
+| AppleALC | 1.7.0 |
+| Lilu | 1.6.1 |
 | NVMeFix | 1.1.0 |
 | VirtualSMC | 1.2.9 |
-| WhateverGreen | 1.5.6 |
+| WhateverGreen | 1.5.8 |
 
 
 ## Hardware
@@ -38,6 +38,7 @@ Building a Hackintosh on ROG STRIX Z490-G GAMING using OpenCore.
 | DRM | ✅ | Using AMD Hardware Acceleration |
 | Sleep | ✅ | Need to use mouse to wake up |
 | USB-C on dGPU | ✅ | For data transmission, XHCI-AMD6800.kext is needed, see USB-C section |
+| Universal Control | ✅ | Tested with MacBook Pro 14-inch |
 
 ## Wi-Fi Card
 
@@ -148,7 +149,7 @@ We'll use a custom kext based on XCHI-unsupported.kext called **XHCI-AMD6800.kex
 
 
 ## Modify config.plist in the OC Folder
-This repository contains EFI based on OpenCore 0.7.6. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
+This repository contains EFI based on OpenCore 0.7.8. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
 
 You need [ProperTree](https://github.com/corpnewt/ProperTree) to open and edit config.plist.
 
