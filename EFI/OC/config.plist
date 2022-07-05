@@ -251,6 +251,8 @@
 	</dict>
 	<key>DeviceProperties</key>
 	<dict>
+		<key>Delete</key>
+		<dict/>
 		<key>Add</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
@@ -274,8 +276,6 @@
 				<data>AQ==</data>
 			</dict>
 		</dict>
-		<key>Delete</key>
-		<dict/>
 	</dict>
 	<key>Kernel</key>
 	<dict>
@@ -896,9 +896,9 @@
 		</dict>
 		<key>Debug</key>
 		<dict>
-			<key>AppleDebug</key>
-			<true/>
 			<key>ApplePanic</key>
+			<true/>
+			<key>AppleDebug</key>
 			<true/>
 			<key>DisableWatchDog</key>
 			<true/>
