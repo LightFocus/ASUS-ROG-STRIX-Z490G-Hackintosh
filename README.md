@@ -73,6 +73,9 @@ You need to put the required kexts in OC/Kexts. After that, run **File -> OC Sna
 
 Note that some of the legacy cards may need [patch](https://dortania.github.io/OpenCore-Install-Guide/extras/monterey.html#bluetooth) in macOS 12, try to avoid them if you can.
 
+## Intel I255-V on macOS Ventura
+
+By default macOS will load AppleEthernetE1000 (Apple's DEXT driver) for I255-V, however, this kext will cause kernel panic on my board once the ethernet cable is plugged (Maybe works for you) . Therefore, we have to force loading AppleIntelI210Ethernet.kext in OpenCore using bootarg `e1000=0`. macOS Ventura dropped AppleIntelI210Ethernet.kext, so we will add it as well.
 
 ## USB Mapping
 
