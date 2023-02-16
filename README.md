@@ -5,13 +5,13 @@ Building a Hackintosh on ROG STRIX Z490-G GAMING using OpenCore.
 ## Software
 | Name | Version |
 | :-: | :-: |
-| macOS | 13.0.1 |
-| OpenCore | 0.8.6 |
-| AppleALC | 1.7.7 |
-| Lilu | 1.6.3 |
+| macOS | 13.2.1 |
+| OpenCore | 0.8.9 |
+| AppleALC | 1.8.0 |
+| Lilu | 1.6.4 |
 | NVMeFix | 1.1.1 |
 | VirtualSMC | 1.3.1 |
-| WhateverGreen | 1.6.2 |
+| WhateverGreen | 1.6.5 |
 
 
 ## Hardware
@@ -152,7 +152,7 @@ We'll use a custom kext based on XCHI-unsupported.kext called **XHCI-AMD6800.kex
 
 
 ## Modify config.plist in the OC Folder
-This repository contains EFI based on OpenCore 0.8.6. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
+This repository contains EFI based on OpenCore 0.8.9. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
 
 You need [ProperTree](https://github.com/corpnewt/ProperTree) to open and edit config.plist.
 
